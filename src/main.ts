@@ -6,8 +6,8 @@ import { Response } from './common/response'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
-  app.useGlobalInterceptors(new Response())
-  app.useGlobalFilters(new HttpFilter())
+  app.useGlobalInterceptors(new Response()) // 全局响应拦截器
+  app.useGlobalFilters(new HttpFilter()) // 全局异常拦截器
   app.useGlobalPipes(new ValidationPipe())
   await app.listen(3000)
 }
