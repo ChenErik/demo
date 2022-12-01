@@ -13,7 +13,6 @@ export class SpiderService {
     const nextText = '下一页'
     let currentPage = 0
     const getCosplay = async () => {
-      console.log(currentPage)
       const options = {
         method: 'GET',
         hostname: 'www.jpmn5.cc',
